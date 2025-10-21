@@ -61,7 +61,7 @@ union all
 -- Percent of Institutional Claims in Core
 select
     7 as metric_id,
-    'medical claim: percent institutional in input layer' as metric_name,
+    'medical claim: percent institutional in core' as metric_name,
     round(
         sum(case when claim_type = 'institutional' then 1 else 0 end) * 100.0 / count(*),
         2
@@ -84,7 +84,7 @@ union all
 -- Percent of Professional Claims in Core
 select
     9 as metric_id,
-    'medical claim: percent professional in input layer' as metric_name,
+    'medical claim: percent professional in core' as metric_name,
     round(
         sum(case when claim_type = 'professional' then 1 else 0 end) * 100.0 / count(*),
         2
